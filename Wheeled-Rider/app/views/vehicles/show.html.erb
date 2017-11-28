@@ -1,0 +1,12 @@
+<h2><%= @vehicle.name %> <a href="/vehicles/<%= @vehicle.id %>/edit">(edit)</a></h2>
+<img src = "<%= @vehicle.img_url %>" alt = "picture of vehicle">
+
+
+<ul>
+  <% @vehicle.category.each do |category| %>
+    <li>
+      <%= link_to "#{category.title}", category_path(category) %>
+    </li>
+
+  <% end %>
+</ul>

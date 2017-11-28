@@ -1,0 +1,9 @@
+<h2><%= @category.title %>
+
+<ul>
+  <% @comment.categorys.each do |comment| %>
+    <li>
+      <%= comment.content %>
+    </li>
+  <% end %>
+</ul>
