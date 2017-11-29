@@ -6,7 +6,7 @@ class VehiclesController < ApplicationController
   end
 
   def new
-    @vehicles = Vehicle.new
+    @vehicle = Vehicle.new
   end
 
   def create
@@ -31,7 +31,7 @@ class VehiclesController < ApplicationController
   def destroy
     @vehicle = Vehicle.find(params[:id])
     @vehicle.destroy
-    redirect_to vehicle_path
+    redirect_to "/vehicles/"
   end
 
   private

@@ -6,20 +6,18 @@ class CategoriesController < ApplicationController
 
   # new
   def new
-    @vehicle = Vehicle.find(params[:vehicle_id])
-    @category = @vehicle.categories.new
+    @category = Category.new
   end
 
   # create
   def create
-    @vehicle = Vehicle.find(params[:vehicle_id])
-    @category = @vehicle.categories.create(category_params)
+    @category = Category.create(category_params)
     redirect_to @category
   end
 
   #show
   def show
-    @category = category.find(params[:id])
+    @category = Category.find(params[:id])
   end
 
   # edit
