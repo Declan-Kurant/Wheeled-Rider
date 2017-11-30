@@ -17,6 +17,8 @@ Users are able to log into the site, choose (or make) a vehicle, select a repres
 ### Technologies used
  * Ruby
  * Rails
+ * Heroku
+ * Devise
 
 ### Deployed Project
 https://wheeled-rider.herokuapp.com/
