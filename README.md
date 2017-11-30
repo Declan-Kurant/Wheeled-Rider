@@ -3,7 +3,7 @@
 This is a forum for aficionados of wheeled vehicles to discuss their passion.
 
 ## To Use
-To participate, simply make an account, click on a vehicle image, and begin participating in discussion. 
+To participate, simply make an account, click on a vehicle image, and begin posting your controversial opinions.
 
 
 ### Brief Example
