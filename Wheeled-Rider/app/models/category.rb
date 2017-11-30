@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
   belongs_to :vehicle
-  has_many :comments, dependent: :destroy
+  has_many :comments
 end
