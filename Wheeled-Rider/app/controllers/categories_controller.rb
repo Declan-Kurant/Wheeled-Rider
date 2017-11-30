@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
   # create
   def create
     @category = Category.create(category_params.merge(user: current_user))
-    puts @category
+
     @category.save
     redirect_to @category
   end
@@ -39,7 +39,7 @@ class CategoriesController < ApplicationController
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
-    redirect_to categories_path
+    redirect_to "/vehicles/"
   end
 
   private

@@ -36,12 +36,19 @@ body {
   height: 300px;
 }
 
-
-
-#vehicle_show {
-    background: url(https://i.ytimg.com/vi/jqDtrIUQSOM/maxresdefault.jpg) no-repeat;
-    background-size: 100%;
+#vehicle_show::after{
+  content: "";
+  background: url(http://road.cc/sites/default/files/styles/main_width/public/oxford-raven-helmet.jpg?itok=XkhiknHJ) no-repeat;
+  background-size:100%;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
+
 .vehicle_show_edit_link{
   color:white;
 }
@@ -100,7 +107,6 @@ body {
 .category_link_wrapper{
   display: flex;
   text-align: center;
-  justify-content: center;
 }
 
 .title_box{
