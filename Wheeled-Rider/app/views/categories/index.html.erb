@@ -1,11 +1,11 @@
-<h2>Categories</h2>
+<h2> All Categories</h2>
 
 <ul>
   <% @categories.each do |category| %>
-    <p> <%= category.title %> </p>
 
     <li>
       <%= link_to category.title, category_path(category) %>
     </li>
+  </br>
   <% end %>
 </ul>

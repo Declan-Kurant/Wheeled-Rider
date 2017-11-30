@@ -10,12 +10,14 @@ class VehiclesController < ApplicationController
   end
 
   def create
-    @vehicle = Vehicle.create(vehicle_params)
+    @vehicle = Vehicle.create(vehicle_params.merge(user: current_user))
     redirect_to vehicle_path(@vehicle)
   end
 
   def show
     @vehicle = Vehicle.find(params[:id])
+    @categories = Category.where(vehicle_id: params[:id])
+    # @categories = Category.all
   end
 
   def edit

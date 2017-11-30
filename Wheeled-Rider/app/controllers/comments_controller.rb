@@ -47,6 +47,6 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit(:title, :album, :preview_url, :artist_id)
+    params.require(:comment).permit(:contet, :author, :tier_of_reply, :time_posted, :category)
   end
 end

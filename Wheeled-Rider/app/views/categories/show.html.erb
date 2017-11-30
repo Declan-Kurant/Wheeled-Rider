@@ -1,4 +1,7 @@
-<h2><%= @category.title %>
-<a href="/categories/">(go back to list of categories)</a> </h2>
+<h2><%= @category.title %> </h2>
 
-<!-- BELOW DOES NOT WORK AS OF 10AM-->
+<body class = "category_show">
+
+<li> <a href="/categories/">(go back)</a> </li>
+<li> <a href="/comment/new">Reply to post</a> </li>
+<li> <a href="/categories/<%= @category.id %>/edit">(edit category)</a></li>

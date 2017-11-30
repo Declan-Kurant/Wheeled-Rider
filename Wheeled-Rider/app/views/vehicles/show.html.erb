@@ -1,6 +1,30 @@
-<h2><%= @vehicle.name %> <a href="/vehicles/<%= @vehicle.id %>/edit">(edit)</a></h2>
-<img src = "<%= @vehicle.img_url %>" alt = "picture of vehicle">
+<body id = "vehicle_show">
 
-<a href = "/vehicles/"> See list of vehicles </a>
+<h5><a class="vehicle_show_edit_link" href="/vehicles/<%= @vehicle.id %>/edit">Edit page</a> </h5>
+
+
+<ul>
+
+<div class= "button_wrapper">
+
+  <a class = "button" href = "/categories/"> See all categories </a>
+  <a class = "button" href = "/categories/new"> Make a NEW category </a>
+  <a class=  "button" href = "/vehicles/"> Home </a>
+</div>
+
 </br>
-<a href = "/categories/"> See all categories </a>
+</br>
+</br>
+
+<div class="category_link_wrapper">
+  <% @categories.each do |category| %>
+
+   <a class="category_link_text" href="/categories/<%= category.id %>">
+       <div class="category_link">
+       <%= category.title %>
+       </div>
+    </a>
+
+</div>
+
+<% end %>

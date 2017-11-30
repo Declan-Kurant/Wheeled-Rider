@@ -4,4 +4,5 @@
   <%= render "form"  %>
 </div>
 
-<%= link_to "Back", root_path  %>
+<%= link_to "Back", category_path  %>
+<%= link_to 'Delete!', category_path(@category), method: :delete, class: 'delete' %>

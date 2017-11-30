@@ -1,4 +1,4 @@
-<%= form_for([@vehicle, @category]) do |f| %>
+<%= form_for([@vehicles, @category]) do |f| %>
 
   <%= f.label :title %>
   <%= f.text_field :title %>
@@ -13,7 +13,7 @@
   <%= f.text_field :last_reply %>
 
   <%= f.label :vehicle %>
-  <%= f.text_field :vehicle %>
+  <%= f.select(:vehicle, options_for_select(["Unicycle", "Bicycle"])) %>
 
   <%= f.submit %>
 

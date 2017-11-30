@@ -1,10 +1,18 @@
-<h2>Vehicles Index <a href="/vehicles/new">(add a new one)</a> </h2>
+<div class="title_box_container">
+  <div class="title_box">
+    <h2>Welcome to Wheeled Rider!!!</h2>
+    <h3> A forum for enthusiasts of ALL vehicles on wheels <h3>  <h5> <a href="/vehicles/new">(click here if there's a vehicle you want, but dont see)</a> </h5>
+  </div>
+</div>
 
-<ul>
+<body background = "https://i.pinimg.com/originals/9f/32/5a/9f325a4a82e07083f703de79893a2b28.jpg">
+
+<div id = "vehicle_image_wrapper">
   <% @vehicles.each do |vehicle| %>
-    <img src = "<%= vehicle.img_url%>" alt = "<%= vehicle.name%>">
-    <a href="/vehicles/<%= vehicle.id %>">
-        <%= vehicle.name %>
+    <div class="vehicle_image_container">
+      <a href="/vehicles/<%= vehicle.id %>">
+      <img class = "vehicle_image" src = "<%= vehicle.img_url%>" alt = "<%= vehicle.name%>" class = "vehicle_image">
       </a>
+    </div>
   <% end %>
-</ul>
+</div>
