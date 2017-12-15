@@ -4,14 +4,12 @@ Rails.application.routes.draw do
 
   root to: 'vehicles#index'
 
-    resources :vehicles do
-      resources :categories
-    end
-
-    resources :categories do
-      resources :comments
-    end
-
-
-
+  resources :vehicles do
+    resources :categories
   end
+
+  resources :categories do
+    resources :comments
+  end
+
+end

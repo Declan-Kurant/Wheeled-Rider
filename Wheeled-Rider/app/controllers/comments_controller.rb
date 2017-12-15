@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   # index
   def index
     @comments = Comment.all
-  end
+  end # You can get rid of your index method and index views since its not being used.  
 
   # new
   def new
@@ -33,7 +33,7 @@ class CommentsController < ApplicationController
 
   # update
   def update
-    @comment = category.find(params[:id])
+    @comment = Category.find(params[:id])
     @comment.update(comment_params)
     redirect_to @comment
   end
@@ -50,3 +50,5 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:contet, :author, :tier_of_reply, :time_posted, :category)
   end
 end
+
+# Delete commented method names

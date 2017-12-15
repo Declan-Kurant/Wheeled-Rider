@@ -17,7 +17,7 @@ class VehiclesController < ApplicationController
   def show
     @vehicle = Vehicle.find(params[:id])
     @categories = Category.where(vehicle_id: params[:id])
-    # @categories = Category.all
+    # ^ This seems a little strange.  You should be able to do @vehicle.categories to get all categories under a vehicle
   end
 
   def edit
@@ -33,7 +33,7 @@ class VehiclesController < ApplicationController
   def destroy
     @vehicle = Vehicle.find(params[:id])
     @vehicle.destroy
-    redirect_to "/vehicles/"
+    redirect_to "/vehicles"
   end
 
   private

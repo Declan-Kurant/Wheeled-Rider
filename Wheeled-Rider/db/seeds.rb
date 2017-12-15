@@ -18,7 +18,7 @@ bicycle = Vehicle.create ({name: "Bicycle" ,img_url: "https://cdn.shopify.com/s/
 muni = unicycle.categories.create({title:"Muni: mountain unicycling", author:"pagemaker", num_replies: 0, last_reply: nil, vehicle: unicycle})
 mewni = unicycle.categories.create({title:"Mewni: mountain unicycling", author:"pagemaker", num_replies: 0, last_reply: nil, vehicle: unicycle})
 no_seat = bicycle.categories.create({title:"Riding without a seat", author:"pagemaker", num_replies: 0, last_reply: nil})
-
+# I had no idea mountain unicycling was a thing...
 # muni.comments.create ([{content:"I ride a 26er", tier_of_reply: 1, author:"pagemaker", time_posted: nil}])
 # no_seat.comments.create ([{content:"Does it hurt for you folks?", tier_of_reply: 1, author:"pagemaker", time_posted: nil}])
 
@@ -30,3 +30,5 @@ no_seat = bicycle.categories.create({title:"Riding without a seat", author:"page
 #     password: "12345678"
 #   )
 # end
+
+# Get rid of commented out code in production branch

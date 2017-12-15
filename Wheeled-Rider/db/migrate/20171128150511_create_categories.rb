@@ -9,3 +9,6 @@ class CreateCategories < ActiveRecord::Migration[5.1]
     end
   end
 end
+
+# good job using the foreign_key constraint however, you do not need to specify index: true as t.references will automatically add this constraint
+# you would want to specify it if you used t.integer 

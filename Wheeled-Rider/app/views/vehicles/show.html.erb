@@ -1,10 +1,7 @@
 <body id = "vehicle_show">
-
+<!-- Use a div instead of body -->
 <h3> <%= @vehicle.name %> </h3>
 <h5><a class="vehicle_show_edit_link" href="/vehicles/<%= @vehicle.id %>/edit">Edit page</a> </h5>
-
-
-<ul>
 
 <div class= "button_wrapper">
 
@@ -16,13 +13,13 @@
 </br>
 </br>
 </br>
-
+<!-- Instead of multiple line breaks, change margins instead -->
 <div class="category_link_wrapper">
   <% @categories.each do |category| %>
 
    <a class="category_link_text" href="/categories/<%= category.id %>">
-       <div class="category_link">
-       <%= category.title %>
+       <div class="category_link"> <!-- might not need a nested div here -->
+         <%= category.title %>
        </div>
     </a>
 
