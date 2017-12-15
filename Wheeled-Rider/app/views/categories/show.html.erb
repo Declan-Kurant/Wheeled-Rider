@@ -1,7 +1,7 @@
 <h2><%= @category.title %> </h2>
 
 <body class = "category_show">
-
+<!-- Need <ul> wrapper around your <li>'s -->
 <li> <a href="/categories/">(go back)</a> </li>
 <li> <a href="/comment/new">Reply to post</a> </li>
 <li> <a href="/categories/<%= @category.id %>/edit">(edit category)</a></li>
@@ -10,7 +10,7 @@
 <div class="category_link_wrapper">
   <% 5.times do |category| %>
        <div class="category_link">
-         <!-- comments go here -->
+
        </div>
 
 </div>

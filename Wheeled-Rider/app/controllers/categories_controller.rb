@@ -12,8 +12,8 @@ class CategoriesController < ApplicationController
   # create
   def create
     @category = Category.create(category_params.merge(user: current_user))
-
-    @category.save
+    # Nice job using the merge method
+    @category.save # you don't need .save if you call .create
     redirect_to @category
   end
 
@@ -24,7 +24,7 @@ class CategoriesController < ApplicationController
 
   # edit
   def edit
-    # @vehicle = Vehicle.find(params[:vehicle_id])
+    # @vehicle = Vehicle.find(params[:vehicle_id]) # No commented out code in production!
     @category = Category.find(params[:id])
   end
 
@@ -39,11 +39,13 @@ class CategoriesController < ApplicationController
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
-    redirect_to "/vehicles/"
+    redirect_to "/vehicles"
   end
 
   private
   def category_params
     params.require(:category).permit(:title, :author, :num_replies, :last_reply, :vehicle)
-  end
+  end # Nice job using params.require in a private method
 end
+
+# Dont really need the comments for the methods names here
